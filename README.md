@@ -1,6 +1,6 @@
 # work-day-scheduler
 
-<h2>USER STORY</h2>
+<h2>User Story</h2>
 
 AS AN employee with a busy schedule
 
@@ -36,3 +36,9 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 
 THEN the saved events persist
+
+<h2>How It Works<h2>
+  
+I used moment.js to pull today's date, which populates the header. JQuery's .ready() function starts the scheduler, with the Save Button's click capturing any text typed in each hour's timeblock (which is kept using localStorage).
+
+I have another function I called "timeBlockColor" that declares the time at the moment of use (called "now") and compares it to the timeblock the user is in. Per the acceptance criteria, it will show red for the hour the user is in, gray for past hour blocks, and green for future hour blocks. This was done using if, else statements.
